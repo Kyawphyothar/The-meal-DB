@@ -1,0 +1,18 @@
+.icon-box{
+    z-index: -1;
+}
+
+.parent{
+    transition: all 0.5s;
+}
+
+.parent:hover .icon-box{
+    z-index: 1;
+    
+}
+ .parent:hover{
+    transform: translateY(0.1rem);
+ }
+.parent:hover .image{
+    opacity: 0.5;
+}

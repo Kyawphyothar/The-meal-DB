@@ -1,0 +1,9 @@
+.nav-form-input {
+  border: 0;
+}
+
+.nav-form-input:focus-visible {
+  outline: none;
+  border: none;
+  box-shadow: none;
+}
