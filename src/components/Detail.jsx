@@ -39,44 +39,25 @@ const Detail = () => {
           <p className=" leading-6 tracking-wide text-gray-900">
             {meals.strInstructions}
           </p>
-          <div className="mt-2 flex justify-between align-middle items-center">
+          <div className="mt-2">
             <div className="">
-              <p className=" text-grey-300">Watch On YouTube</p>
+              <p className=" text-grey-300">Watch On YouTube:</p>
               <a href={meals.strYoutube} target="_blank">
                 <FaYoutube className=" text-red-600 text-[3rem]" />
               </a>
             </div>
-            <div className="">
-              <button
-                id="dropdownButton"
-                data-dropdown-toggle="dropdown"
-                className="text-white bg-gray-700 rounded-lg text-sm px-4 py-2 text-center inline-flex items-center"
-                type="button"
-              >
-                View Ingredients
-              </button>
-              <div
-                id="dropdown"
-                className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44"
-              >
-                <ul
-                  className="p-3 text-sm text-gray-700"
-                  aria-labelledby="dropdownButton"
-                >
-                  {Object.keys(meals).map((key) => {
-                    if (key.includes("strIngredient") && meals[key]) {
-                      return <li key={key}>{meals[key]}</li>;
-                    }
-                    return "";
-                  })}
-                </ul>
-              </div>
-            </div>
           </div>
-          <p className=" text-sm ">
-            Tips: Try to reload the page if the "View Product " button doesn't
-            work.
-          </p>
+          <div className=" p-3">
+            <h3 className=" text-orange-700 text-lg font-semibold">Ingredients</h3>
+          <ul>
+              {Object.keys(meals).map((key) => {
+                if (key.includes("strIngredient") && meals[key]) {
+                  return  <li key={key} className=" leading-7 list-square">{meals[key]}</li>;
+                }
+                return null;
+              })}
+            </ul>
+          </div>
         </div>
       </div>
     </div>
