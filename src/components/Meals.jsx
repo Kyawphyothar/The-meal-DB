@@ -18,7 +18,7 @@ const Meals = () => {
   };
   return (
     <>
-      <div className=" flex gap-8 justify-center flex-wrap mt-20 ">
+      <div className=" flex gap-10 justify-center flex-wrap mt-20 ">
         {meals?.map((meal) => {
           return (
             <MealCart
