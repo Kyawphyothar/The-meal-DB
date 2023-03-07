@@ -1,4 +1,4 @@
 # The-meal-DB
-# Vite app using the mealDB api
-# used languages and framework
-layout with Tailwind Css and Render with React Js 
+# Vite App using the MealDB Api
+# Used languages and framework
+Tailwind Css,React.js and JavaScript
